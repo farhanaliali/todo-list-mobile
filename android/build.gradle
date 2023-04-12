@@ -8,12 +8,17 @@ buildscript {
         targetSdkVersion = 29
         ndkVersion = "20.1.5948944"
     }
+   defaultConfig {
+           multiDexEnabled true
+    }
     repositories {
         google()
         jcenter()
     }
     dependencies {
         classpath("com.android.tools.build:gradle:4.1.0")
+        def multidex_version = "2.0.1"
+        implementation "androidx.multidex:multidex:$multidex_version"
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
