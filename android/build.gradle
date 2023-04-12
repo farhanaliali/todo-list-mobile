@@ -1,4 +1,7 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+defaultConfig {
+           multiDexEnabled true
+    }
 
 buildscript {
     ext {
@@ -7,9 +10,6 @@ buildscript {
         compileSdkVersion = 29
         targetSdkVersion = 29
         ndkVersion = "20.1.5948944"
-    }
-   defaultConfig {
-           multiDexEnabled true
     }
     repositories {
         google()
